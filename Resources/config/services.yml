@@ -1,0 +1,7 @@
+parameters:
+#    chm_bank_follow_up.example.class: Chm\BankFollowUpBundle\Example
+
+services:
+#    chm_bank_follow_up.example:
+#        class: %chm_bank_follow_up.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

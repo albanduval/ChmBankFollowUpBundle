@@ -1,0 +1,3 @@
+chm_bank_follow_up_homepage:
+    pattern:  /graph
+    defaults: { _controller: ChmBankFollowUpBundle:Graph:index }

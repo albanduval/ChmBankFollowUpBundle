@@ -1,0 +1,36 @@
+{
+    "name": "symfony/framework-standard-edition",
+    "license": "MIT",
+    "type": "project",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": { "Chm\\BankFollowUpBundle": "" }
+    },
+    "target-dir": "Chm/BankFollowUpBundle",
+    "require": {
+        "php": ">=5.3.3",
+        "psr/log":                        "~1.0",
+        "symfony/framework-bundle":       "~2.2",
+        "doctrine/mongodb-odm": "1.0.*@dev",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "ob/highcharts-bundle": "1.*"
+    },
+    "require-dev": {
+    },
+    "scripts": {
+        "post-root-package-install": [
+        ],
+        "post-install-cmd": [
+        ],
+        "post-update-cmd": [
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}
