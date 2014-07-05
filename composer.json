@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "chm/bankfollowupbundle",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Simple bank follow graphs bundle, using mongoDB and Highcharts",
     "autoload": {
         "psr-0": { "Chm\\BankFollowUpBundle": "" }
     },
@@ -16,17 +16,6 @@
         "ob/highcharts-bundle": "1.*"
     },
     "require-dev": {
-    },
-    "scripts": {
-        "post-root-package-install": [
-        ],
-        "post-install-cmd": [
-        ],
-        "post-update-cmd": [
-        ]
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "branch-alias": {
