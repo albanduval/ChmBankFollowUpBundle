@@ -10,7 +10,7 @@ use \MongoDate;
 class GraphController extends Controller
 {
     private function generateSerie ( $mongoResult, $currentMonth = false ) {
-        $start = 2800;
+        $start = 0;
         $previousValue = $total = $start;
         $graphSerie = [];
         foreach($mongoResult as $element) {
@@ -38,7 +38,7 @@ class GraphController extends Controller
     {
         $series = [];
 
-        $averageLength = 12;
+        $averageLength = 6;
         $aggregationPipeline  = [
             [ '$project' => [ 'date' => 1, 'nicedate' => 1, 'niceamount' => 1 ] ],
             [ '$match'   => [ 'niceamount' => [ '$lt' => 0 ], 'nicedate' => [ '$gte' => new MongoDate( strtotime('first day of ' . ( $averageLength + 1 ) . ' month ago') ), '$lt' => new MongoDate( strtotime('last day of 1 month ago') ) ] ] ],
@@ -116,8 +116,8 @@ class GraphController extends Controller
         $ob->yAxis->title(array('text'  => "Solde"));
         $ob->yAxis->plotBands( [
             'color' => '#FFE389', // Color value
-            'from'  => '-100000',   // Start of the plot band
-            'to'    => '0',       // End of the plot band
+            'from'  => '-1000000',   // Start of the plot band
+            'to'    => '-2800',       // End of the plot band
             ]);
         $ob->series($series);
 
