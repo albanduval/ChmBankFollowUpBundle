@@ -115,9 +115,9 @@ class GraphController extends Controller
         $ob->xAxis->categories(range(1,31));
         $ob->yAxis->title(array('text'  => "Solde"));
         $ob->yAxis->plotBands( [
-            'color' => '#FFE389', // Color value
-            'from'  => '-1000000',   // Start of the plot band
-            'to'    => '-2800',       // End of the plot band
+            'color' => '#FFE389',  // Color value - should be configurable
+            'from'  => '-1000000', // Start of the plot band - should be the plot band end x 100 to always be in displayed graph
+            'to'    => '-2800',    // End of the plot band - should be configurable
             ]);
         $ob->series($series);
 

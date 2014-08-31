@@ -29,9 +29,9 @@ db.operations.find().forEach( function(op) {
 		op.niceamount = parseFloat(op.amount);
 	}
 	db.operations.save(op);
-} )
+} );
 
 // create niceamount
 db.operations.find( { amount: /,/ }).forEach( function(op) { 
 	print(op.niceamount); 
-	db.operations.save(op); print(op.niceamount); } )
+	db.operations.save(op); print(op.niceamount); } );
